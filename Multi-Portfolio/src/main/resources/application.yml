@@ -1,0 +1,36 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://ranjitbichukale11:3sm6t2dkbf@cluster0.wetfmzi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: Task
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8082
+  
+# JWT Configuration
+app:
+  jwtSecret: XjNfJy2LmNNJSmG5YeW/OZ+1w7up8g405ujX+9wOrNM864wAN028Fg/VuKeTJC1N6y/wPnG+QAKENsL26idEYw==SecureKey2024MultiPortfolio123456789
+  jwtExpirationInMs: 86400000 # 24 hours in milliseconds
+  upload:
+    dir: ${UPLOAD_DIR:uploads/photos}
+
+# AWS S3 Configuration
+aws:
+  s3:
+    enabled: ${AWS_S3_ENABLED:true}
+    bucket:
+      name: ${AWS_S3_BUCKET:multi-portfolioi}
+    region: ${AWS_REGION:ap-south-1}
+
+cloud:
+  aws:
+    credentials:
+      access-key: ${AWS_ACCESS_KEY:AKIAVJLYX7NNBGIPTE7A}
+      secret-key: ${AWS_SECRET_KEY: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}
+    region:
+      static: ${AWS_REGION:ap-south-1}
+
